@@ -73,7 +73,7 @@
         </div>
 
         <div class="col-md-6">
-          <form method="post">
+          <form action="https://formsubmit.co/grand.storeone@gmail.com" method="POST"> {% csrf_token %}
 
             <div class="row">
               <div class="col-md-6">
@@ -93,7 +93,8 @@
               </div>
               <div class="col-md-12">
                 <fieldset>
-                  <button type="submit" class="button" onclick="checkout()" >Send Message Now</button>
+                  <button type="submit">Send Message Now</button>
+                  <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send Message</button>
                 </fieldset>
               </div>
             </div>
