@@ -1,0 +1,115 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>User SignUp</title>
+
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- main1 CSS-->
+
+	<link href="{% static 'css/main1.css' %}" rel="stylesheet" media="all">
+
+</head>
+
+<body>
+    <form action="signup" method="post">
+        {% csrf_token %}
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading" style="background-color:green">
+                    <h2 class="title">User Registration</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST" >
+                        <div class="form-row m-b-55">
+                            <div class="name">Name</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="first_name" placeholder="First Name">
+                                            <!-- <input type="text" name="first_name" placeholder="First Name"> -->
+                                            <!-- <label class="label--desc">Enter First name</label> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="last_name" placeholder="Last Name">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Username</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="username" placeholder="Username">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Email I'd</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" name="email" placeholder="Email I'd">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row m-b-55">
+                            <div class="name">Passward</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="password" name="password1" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="password" name="password2" placeholder="Confirm Password">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						
+						
+					    <div>
+                            <input class="btn btn--radius-2 btn--red" type="submit" style="background-color:green">
+                            <div>
+                                <a href="login" class="btn btn--radius-2 btn--red">Already have account</a>
+                                <a href="/" class="btn btn--radius-2 btn--red">Home</a>
+                            </div>
+						</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+
+    <div>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+    </div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

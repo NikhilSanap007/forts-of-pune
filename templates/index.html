@@ -1,0 +1,135 @@
+{% load static %}
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <title>Forts Of Pune</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap1.min.css' %}">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/templatemo-grad-school.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lightbox.css' %}">
+
+  </head>
+
+<body>
+
+   
+  <!--header-->
+  <header class="main-header clearfix">
+    <div class="logo">
+      <a href="">Forts of <em>Pune</em></a>
+    </div>
+  </header>
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video">
+          <source src="{% static 'images/course-video.mp4' %}" type="video/mp4" />
+      </video>
+
+      <div class="video-overlay header-text">
+          <div class="caption">
+              <h2>The Beauty of <em>Sahyadri</em></h2>
+
+            {% if user.is_authenticated %}
+            <div class="main-button">
+                <a style="background-color:yellow;color:red">Hello, <b>{{user.first_name}}</b> are you sure do you want to Logout</a><br>
+                <div><a href="accounts/logout"><b>Yes</b></a>
+                <a href="forts"><b>No</b></a></div>
+            </div>
+            {% else %}
+
+              <div class="main-button">
+                  <div><a href="accounts/login">Login</a></div><br>
+                  <div><a href="accounts/signup">Signup</a></div>
+              </div>
+            {% endif %}
+          </div>
+      </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+
+  <section class="section contact" data-section="section6">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Keep In Touch</h2>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <form method="post">
+
+            <div class="row">
+              <div class="col-md-6">
+                  <fieldset>
+                    <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required>
+                  </fieldset>
+                </div>
+                <div class="col-md-6">
+                  <fieldset>
+                    <input name="email" type="text" class="form-control" id="email" placeholder="Your Email" required>
+                  </fieldset>
+                </div>
+              <div class="col-md-12">
+                <fieldset>
+                  <textarea name="massage" rows="6" class="form-control" id="massage" placeholder="Your message..." required></textarea>
+                </fieldset>
+              </div>
+              <div class="col-md-12">
+                <fieldset>
+                  <button type="submit" class="button" onclick="checkout()" >Send Message Now</button>
+                </fieldset>
+              </div>
+            </div>
+
+            <script>
+            function checkout()
+              {
+                swal({
+                    title: "Massage Sent Successfully",
+                    text: "Thanks for your response",
+                    icon: "success",
+                    button: "Done",
+                });
+              }
+            </script>
+
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div id="image">
+            <img src="{% static 'images/img1.jpg' %}" width="450" height="425">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p> Grad School
+           | Design by: <a rel="sponsored" target="_parent">Nikhil Sanap</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
