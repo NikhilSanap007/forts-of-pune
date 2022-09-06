@@ -1,16 +1,4 @@
 @import url('http://fonts,googleapis.com/css?family=Bad+Script');
-body
-{
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	background: #000;
-	font-family: 'Bad Script', cursive;
-}
-
 h1
 {
 	margin: 0;
