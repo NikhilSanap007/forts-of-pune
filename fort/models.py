@@ -12,3 +12,12 @@ class fort(models.Model):
 
     def __str__(self):
         return self.name
+
+class Contact_form(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.CharField(max_length=100)
+    message = models.TextField()
+    timeStamp = models.DateTimeField(auto_now_add=True, blank=True)
+
+    def __str__(self):
+        return 'message from : ' + self.name

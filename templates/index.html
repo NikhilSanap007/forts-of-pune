@@ -73,7 +73,7 @@
         </div>
 
         <div class="col-md-6">
-          <form action="https://formsubmit.co/3ddf7ce5c2f2c8e2c64c80a644930cbd" method="POST"> {% csrf_token %}
+          <form method="POST" action="/contact_form"> {% csrf_token %}
 
             <div class="row">
               <div class="col-md-6">
@@ -83,23 +83,16 @@
                 </div>
                 <div class="col-md-6">
                   <fieldset>
-                    <input name="email" type="text" class="form-control" id="email" placeholder="Your Email" required>
+                    <input name="email" type="email" class="form-control" id="email" placeholder="Your Email" required>
                   </fieldset>
                 </div>
               <div class="col-md-12">
                 <fieldset>
-                  <textarea name="massage" rows="6" class="form-control" id="massage" placeholder="Your message..." required></textarea>
+                  <textarea name="message" rows="6" class="form-control" id="massage" placeholder="Your message..." required></textarea>
                 </fieldset>
               </div>
               <div class="col-md-12">
                 <fieldset>
-
-
-				    <input type="hidden" name="_captcha" value="false">
-				    <input type="hidden" name="_next" value="https://forts-of-pune.herokuapp.com/">
-				    <input type="hidden" name="_subject" value="New Visiter in Forts Near Pune">
-
-
                   <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send Message</button>
                 </fieldset>
               </div>
@@ -121,7 +114,7 @@
         </div>
         <div class="col-md-6">
           <div id="image">
-            <img src="{% static 'images/img1.jpg' %}" width="450" height="425">
+            <img src="{% static 'images/img1.jpg' %}" width="450" height="425" class="responsive">
           </div>
         </div>
       </div>
