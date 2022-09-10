@@ -33,7 +33,7 @@
 
     <div class="tm-hero d-flex justify-content-center align-items-center" style="background-color:lightgreen" data-parallax="scroll">
         <form>
-            <h2>
+            <h2 style="font-size:50px">
 			    <span>F</span>
 		    	<span>O</span>
 	    		<span>R</span>
@@ -57,8 +57,11 @@
                         <h2>{{fort1.name}}</h2>
 
                         <a href="{% url 'fort_detail' fort1.f_id %}">View more</a>
-                    </figcaption>                    
+                    </figcaption>
                 </figure>
+                <center>
+                    <h5>{{fort1.name}}</h5>
+                </center>
             </div>
 
         {% endfor %}
